@@ -63,6 +63,7 @@ namespace UI
         {
             colorDialog1.ShowDialog();
             this.BackColor = colorDialog1.Color;
+            this.BackgroundImage = null;
         }
 
         private void PapelDeParedeToolStripMenuItem_Click(object sender, EventArgs e)
