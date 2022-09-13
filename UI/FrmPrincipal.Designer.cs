@@ -434,9 +434,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.Text = "SisCar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
