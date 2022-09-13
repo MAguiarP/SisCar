@@ -58,6 +58,25 @@ namespace UI
             else
                 toolStrip1.Hide();
         }
+
+        private void CorDeFundoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            this.BackColor = colorDialog1.Color;
+        }
+
+        private void PapelDeParedeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            openFileDialog1.Title = "Selecione Imagem de Fundo";
+            openFileDialog1.FileName = "";
+            openFileDialog1.Filter = "Arquivos de Imagem | (*.bmp;*.jpg;*.gif) | Todos os arquivos | *.*";
+            openFileDialog1.Multiselect = false;
+
+            if (openFileDialog1.FileName != "")
+                this.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+        }
     }
 
 }
