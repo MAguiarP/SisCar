@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace UI
 {
@@ -38,6 +39,24 @@ namespace UI
         {
             toolStripStatusLabel2.Text="Data: " + DateTime.Now.ToShortDateString();
             toolStripStatusLabel3.Text = "Hora: " + DateTime.Now.ToShortTimeString();
+        }
+
+        private void CalculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("calc.exe");
+        }
+
+        private void ConsultaDetranToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("msedge.exe", "https://www.detran.rj.gov.br/");
+        }
+
+        private void ExibirBarraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (exibirBarraToolStripMenuItem.Checked)
+                toolStrip1.Show();
+            else
+                toolStrip1.Hide();
         }
     }
 
