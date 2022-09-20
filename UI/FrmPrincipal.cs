@@ -25,7 +25,11 @@ namespace UI
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Deseja finalizar o SisCar?", "SisCar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
             Application.Exit();
+
+
         }
 
         public string usuario;
@@ -61,9 +65,19 @@ namespace UI
 
         private void CorDeFundoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult dlg1 = new DialogResult();
+
+            if(this.BackgroundImage != null)
+            {
+                dlg1 = MessageBox.Show("Deseja descartar o papel de parede atual?", "Cor de Fundo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            }
+
+            if((dlg1 == DialogResult.Yes) || (dlg1 == DialogResult.None))
+            {
             colorDialog1.ShowDialog();
             this.BackColor = colorDialog1.Color;
             this.BackgroundImage = null;
+            };
         }
 
         private void PapelDeParedeToolStripMenuItem_Click(object sender, EventArgs e)
