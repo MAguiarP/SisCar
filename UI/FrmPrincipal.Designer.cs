@@ -109,8 +109,9 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "&Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // veículosToolStripMenuItem
             // 
@@ -118,7 +119,7 @@
             this.marcasToolStripMenuItem,
             this.modelosToolStripMenuItem});
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.veículosToolStripMenuItem.Text = "&Veículos";
             // 
             // marcasToolStripMenuItem
@@ -136,7 +137,7 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuáriosToolStripMenuItem.Text = "&Usuários";
             // 
             // movimentaçãoToolStripMenuItem
@@ -196,33 +197,33 @@
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.CalculadoraToolStripMenuItem_Click);
             // 
             // consultaDetranToolStripMenuItem
             // 
             this.consultaDetranToolStripMenuItem.Name = "consultaDetranToolStripMenuItem";
-            this.consultaDetranToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaDetranToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.consultaDetranToolStripMenuItem.Text = "Consulta &Detran";
             this.consultaDetranToolStripMenuItem.Click += new System.EventHandler(this.ConsultaDetranToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(156, 6);
             // 
             // corDeFundoToolStripMenuItem
             // 
             this.corDeFundoToolStripMenuItem.Name = "corDeFundoToolStripMenuItem";
-            this.corDeFundoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.corDeFundoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.corDeFundoToolStripMenuItem.Text = "C&or de Fundo";
             this.corDeFundoToolStripMenuItem.Click += new System.EventHandler(this.CorDeFundoToolStripMenuItem_Click);
             // 
             // papelDeParedeToolStripMenuItem
             // 
             this.papelDeParedeToolStripMenuItem.Name = "papelDeParedeToolStripMenuItem";
-            this.papelDeParedeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.papelDeParedeToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.papelDeParedeToolStripMenuItem.Text = "&Papel de Parede";
             this.papelDeParedeToolStripMenuItem.Click += new System.EventHandler(this.PapelDeParedeToolStripMenuItem_Click);
             // 
@@ -407,21 +408,21 @@
             this.exibirBarraToolStripMenuItem.CheckOnClick = true;
             this.exibirBarraToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.exibirBarraToolStripMenuItem.Name = "exibirBarraToolStripMenuItem";
-            this.exibirBarraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exibirBarraToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exibirBarraToolStripMenuItem.Text = "Exibir barra";
             this.exibirBarraToolStripMenuItem.Click += new System.EventHandler(this.ExibirBarraToolStripMenuItem_Click);
             // 
             // corDeFundoToolStripMenuItem1
             // 
             this.corDeFundoToolStripMenuItem1.Name = "corDeFundoToolStripMenuItem1";
-            this.corDeFundoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.corDeFundoToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.corDeFundoToolStripMenuItem1.Text = "Cor de fundo";
             this.corDeFundoToolStripMenuItem1.Click += new System.EventHandler(this.CorDeFundoToolStripMenuItem_Click);
             // 
             // papelDeParedeToolStripMenuItem1
             // 
             this.papelDeParedeToolStripMenuItem1.Name = "papelDeParedeToolStripMenuItem1";
-            this.papelDeParedeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.papelDeParedeToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.papelDeParedeToolStripMenuItem1.Text = "Papel de parede";
             this.papelDeParedeToolStripMenuItem1.Click += new System.EventHandler(this.PapelDeParedeToolStripMenuItem_Click);
             // 

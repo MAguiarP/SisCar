@@ -92,6 +92,12 @@ namespace UI
                 this.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
 
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes1 = new FrmClientes();
+            frmClientes1.ShowDialog();
+        }
     }
 
 }
