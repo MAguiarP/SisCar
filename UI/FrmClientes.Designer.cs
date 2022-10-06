@@ -30,6 +30,15 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtFECHAR = new System.Windows.Forms.Button();
+            this.BtEXCLUIR = new System.Windows.Forms.Button();
+            this.BtGRAVAR = new System.Windows.Forms.Button();
+            this.CkRESTRICAO = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RbFEMININO = new System.Windows.Forms.RadioButton();
+            this.RbMASCULINO = new System.Windows.Forms.RadioButton();
+            this.CbESTADO = new System.Windows.Forms.ComboBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.TxtFONE1 = new System.Windows.Forms.MaskedTextBox();
             this.TxtCIDADE = new System.Windows.Forms.TextBox();
@@ -53,20 +62,11 @@
             this.TxtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.CbESTADO = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RbMASCULINO = new System.Windows.Forms.RadioButton();
-            this.RbFEMININO = new System.Windows.Forms.RadioButton();
-            this.CkRESTRICAO = new System.Windows.Forms.CheckBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.BtFECHAR = new System.Windows.Forms.Button();
-            this.BtEXCLUIR = new System.Windows.Forms.Button();
-            this.BtGRAVAR = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -114,6 +114,136 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.BtFECHAR);
+            this.panel2.Controls.Add(this.BtEXCLUIR);
+            this.panel2.Controls.Add(this.BtGRAVAR);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 299);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(6);
+            this.panel2.Size = new System.Drawing.Size(650, 66);
+            this.panel2.TabIndex = 15;
+            this.panel2.TabStop = true;
+            // 
+            // BtFECHAR
+            // 
+            this.BtFECHAR.Image = global::UI.Properties.Resources.icons8_close_48;
+            this.BtFECHAR.Location = new System.Drawing.Point(533, 6);
+            this.BtFECHAR.Name = "BtFECHAR";
+            this.BtFECHAR.Size = new System.Drawing.Size(112, 57);
+            this.BtFECHAR.TabIndex = 2;
+            this.BtFECHAR.Text = "&FECHAR";
+            this.BtFECHAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtFECHAR.UseVisualStyleBackColor = true;
+            this.BtFECHAR.Click += new System.EventHandler(this.BtFECHAR_Click);
+            // 
+            // BtEXCLUIR
+            // 
+            this.BtEXCLUIR.Image = global::UI.Properties.Resources.icons8_remove_48;
+            this.BtEXCLUIR.Location = new System.Drawing.Point(161, 6);
+            this.BtEXCLUIR.Name = "BtEXCLUIR";
+            this.BtEXCLUIR.Size = new System.Drawing.Size(112, 57);
+            this.BtEXCLUIR.TabIndex = 1;
+            this.BtEXCLUIR.Text = "&EXCLUIR";
+            this.BtEXCLUIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtEXCLUIR.UseVisualStyleBackColor = true;
+            // 
+            // BtGRAVAR
+            // 
+            this.BtGRAVAR.Image = global::UI.Properties.Resources.icons8_save_48;
+            this.BtGRAVAR.Location = new System.Drawing.Point(5, 6);
+            this.BtGRAVAR.Name = "BtGRAVAR";
+            this.BtGRAVAR.Size = new System.Drawing.Size(112, 57);
+            this.BtGRAVAR.TabIndex = 0;
+            this.BtGRAVAR.Text = "&GRAVAR";
+            this.BtGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtGRAVAR.UseVisualStyleBackColor = true;
+            // 
+            // CkRESTRICAO
+            // 
+            this.CkRESTRICAO.AutoSize = true;
+            this.CkRESTRICAO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CkRESTRICAO.Location = new System.Drawing.Point(338, 249);
+            this.CkRESTRICAO.Name = "CkRESTRICAO";
+            this.CkRESTRICAO.Size = new System.Drawing.Size(80, 17);
+            this.CkRESTRICAO.TabIndex = 14;
+            this.CkRESTRICAO.Text = "Restrição";
+            this.CkRESTRICAO.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.RbFEMININO);
+            this.groupBox1.Controls.Add(this.RbMASCULINO);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(8, 239);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(166, 50);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sexo";
+            // 
+            // RbFEMININO
+            // 
+            this.RbFEMININO.AutoSize = true;
+            this.RbFEMININO.Location = new System.Drawing.Point(90, 19);
+            this.RbFEMININO.Name = "RbFEMININO";
+            this.RbFEMININO.Size = new System.Drawing.Size(75, 17);
+            this.RbFEMININO.TabIndex = 1;
+            this.RbFEMININO.Text = "Feminino";
+            this.RbFEMININO.UseVisualStyleBackColor = true;
+            // 
+            // RbMASCULINO
+            // 
+            this.RbMASCULINO.AutoSize = true;
+            this.RbMASCULINO.Location = new System.Drawing.Point(2, 19);
+            this.RbMASCULINO.Name = "RbMASCULINO";
+            this.RbMASCULINO.Size = new System.Drawing.Size(82, 17);
+            this.RbMASCULINO.TabIndex = 0;
+            this.RbMASCULINO.Text = "Masculino";
+            this.RbMASCULINO.UseVisualStyleBackColor = true;
+            // 
+            // CbESTADO
+            // 
+            this.CbESTADO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbESTADO.FormattingEnabled = true;
+            this.CbESTADO.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.CbESTADO.Location = new System.Drawing.Point(524, 204);
+            this.CbESTADO.Name = "CbESTADO";
+            this.CbESTADO.Size = new System.Drawing.Size(94, 21);
+            this.CbESTADO.TabIndex = 10;
             // 
             // maskedTextBox1
             // 
@@ -332,136 +462,6 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // CbESTADO
-            // 
-            this.CbESTADO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbESTADO.FormattingEnabled = true;
-            this.CbESTADO.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
-            this.CbESTADO.Location = new System.Drawing.Point(524, 204);
-            this.CbESTADO.Name = "CbESTADO";
-            this.CbESTADO.Size = new System.Drawing.Size(94, 21);
-            this.CbESTADO.TabIndex = 10;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.RbFEMININO);
-            this.groupBox1.Controls.Add(this.RbMASCULINO);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(8, 239);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(166, 50);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sexo";
-            // 
-            // RbMASCULINO
-            // 
-            this.RbMASCULINO.AutoSize = true;
-            this.RbMASCULINO.Location = new System.Drawing.Point(2, 19);
-            this.RbMASCULINO.Name = "RbMASCULINO";
-            this.RbMASCULINO.Size = new System.Drawing.Size(82, 17);
-            this.RbMASCULINO.TabIndex = 0;
-            this.RbMASCULINO.Text = "Masculino";
-            this.RbMASCULINO.UseVisualStyleBackColor = true;
-            // 
-            // RbFEMININO
-            // 
-            this.RbFEMININO.AutoSize = true;
-            this.RbFEMININO.Location = new System.Drawing.Point(90, 19);
-            this.RbFEMININO.Name = "RbFEMININO";
-            this.RbFEMININO.Size = new System.Drawing.Size(75, 17);
-            this.RbFEMININO.TabIndex = 1;
-            this.RbFEMININO.Text = "Feminino";
-            this.RbFEMININO.UseVisualStyleBackColor = true;
-            // 
-            // CkRESTRICAO
-            // 
-            this.CkRESTRICAO.AutoSize = true;
-            this.CkRESTRICAO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CkRESTRICAO.Location = new System.Drawing.Point(338, 249);
-            this.CkRESTRICAO.Name = "CkRESTRICAO";
-            this.CkRESTRICAO.Size = new System.Drawing.Size(80, 17);
-            this.CkRESTRICAO.TabIndex = 14;
-            this.CkRESTRICAO.Text = "Restrição";
-            this.CkRESTRICAO.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.BtFECHAR);
-            this.panel2.Controls.Add(this.BtEXCLUIR);
-            this.panel2.Controls.Add(this.BtGRAVAR);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 299);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(6);
-            this.panel2.Size = new System.Drawing.Size(650, 66);
-            this.panel2.TabIndex = 15;
-            this.panel2.TabStop = true;
-            // 
-            // BtFECHAR
-            // 
-            this.BtFECHAR.Image = global::UI.Properties.Resources.icons8_close_48;
-            this.BtFECHAR.Location = new System.Drawing.Point(533, 6);
-            this.BtFECHAR.Name = "BtFECHAR";
-            this.BtFECHAR.Size = new System.Drawing.Size(112, 57);
-            this.BtFECHAR.TabIndex = 2;
-            this.BtFECHAR.Text = "&FECHAR";
-            this.BtFECHAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtFECHAR.UseVisualStyleBackColor = true;
-            this.BtFECHAR.Click += new System.EventHandler(this.BtFECHAR_Click);
-            // 
-            // BtEXCLUIR
-            // 
-            this.BtEXCLUIR.Image = global::UI.Properties.Resources.icons8_remove_48;
-            this.BtEXCLUIR.Location = new System.Drawing.Point(117, 6);
-            this.BtEXCLUIR.Name = "BtEXCLUIR";
-            this.BtEXCLUIR.Size = new System.Drawing.Size(112, 57);
-            this.BtEXCLUIR.TabIndex = 1;
-            this.BtEXCLUIR.Text = "&EXCLUIR";
-            this.BtEXCLUIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtEXCLUIR.UseVisualStyleBackColor = true;
-            // 
-            // BtGRAVAR
-            // 
-            this.BtGRAVAR.Image = global::UI.Properties.Resources.icons8_save_48;
-            this.BtGRAVAR.Location = new System.Drawing.Point(5, 6);
-            this.BtGRAVAR.Name = "BtGRAVAR";
-            this.BtGRAVAR.Size = new System.Drawing.Size(112, 57);
-            this.BtGRAVAR.TabIndex = 0;
-            this.BtGRAVAR.Text = "&GRAVAR";
-            this.BtGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtGRAVAR.UseVisualStyleBackColor = true;
-            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,11 +476,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
