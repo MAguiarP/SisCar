@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using System.Data;
+using Npgsql;
 
 namespace DAL
 {
-    public class Class1
+    public static class ConnectionFactory
     {
     }
 }
