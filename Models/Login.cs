@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Login
+    public static class Login
     {
+        private static string user = null;
+
+        public static string User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+
     }
 }
