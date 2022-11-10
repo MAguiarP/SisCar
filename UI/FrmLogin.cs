@@ -47,11 +47,12 @@ namespace UI
                 }
                 else
                 {
-                        MessageBox.Show("Usuário ou Senha Incorreto! Tente Novamente!", "Autenticação", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        TxtUsuario.Text = "";
-                        TxtSenha.Text = "";
-                        TxtUsuario.Focus();
+                    MessageBox.Show("Usuário ou Senha Incorreto! Tente Novamente!", "Autenticação", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    TxtUsuario.Text = "";
+                    TxtSenha.Text = "";
+                    TxtUsuario.Focus();
                 }
+            }
 
             catch (Exception ex)
             {
