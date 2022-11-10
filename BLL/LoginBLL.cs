@@ -10,7 +10,7 @@ namespace BLL
 {
     public class LoginBLL
     {
-        public bool verificarLogin(Usuario usuario)
+        public bool VerificarLogin(Usuario usuario)
         {
           if(usuario.Login.Trim().Length == 0)
             {

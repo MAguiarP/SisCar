@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Usuario
+    public class Usuario
     {
         private string login;
         private string senha;
