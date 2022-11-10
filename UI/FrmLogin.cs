@@ -35,9 +35,9 @@ namespace UI
                 usuario.Login = TxtUsuario.Text;
                 usuario.Senha = TxtSenha.Text;
 
-                LoginBLL loginBLL = new LoginBLL();
+                LoginBLL usuarioBLL = new LoginBLL();
 
-                if (usuarioBLL.verificarLogin(usuario))
+                if (usuarioBLL.VerificarLogin(usuario))
                 {
                     Login.User = usuario.Login;
                     FrmPrincipal frmPrincipal = new FrmPrincipal();
