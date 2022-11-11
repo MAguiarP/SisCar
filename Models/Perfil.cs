@@ -32,5 +32,23 @@ namespace Models
             get { return Valor; }
             set { Valor = value; }
         }
+
+        public string Descricao
+        {
+            get { return descricao; }
+            set { descricao = value; }
+        }
+
+        private string Plano_de_Fundo
+        {
+            get { return plano_de_fundo; }
+            set { plano_de_fundo = value; }
+        }
+
+        private string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
     }
 }
