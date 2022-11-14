@@ -162,6 +162,7 @@
             this.BtGRAVAR.Text = "&GRAVAR";
             this.BtGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtGRAVAR.UseVisualStyleBackColor = true;
+            this.BtGRAVAR.Click += new System.EventHandler(this.BtGRAVAR_Click);
             // 
             // CkRESTRICAO
             // 

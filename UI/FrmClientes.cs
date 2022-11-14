@@ -21,5 +21,10 @@ namespace UI
         {
             this.Dispose();
         }
+
+        private void BtGRAVAR_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
