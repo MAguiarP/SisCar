@@ -7,6 +7,7 @@ using Models;
 using System.Data;
 using Npgsql;
 using System.Security.Cryptography.X509Certificates;
+using System.Linq.Expressions;
 
 namespace DAL
 {
@@ -61,7 +62,7 @@ namespace DAL
             }
         }
 
-        public void VerificarCoreFundo(Perfil perfil)
+        public string VerificarCoreFundo(Perfil perfil)
         {
             try
             {
@@ -75,11 +76,26 @@ namespace DAL
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                if (dt.Rows.Count > 0)
+                {
+                    return dt.Rows[0]["plano_de_fundo"].ToString();
+                }
+                else
+                {
+                    return null;
+                }
+            }
 
-            }   
-            
+            catch (Exception ex)
+            { 
+                throw new Exception("Falha ao verificar campo na base de dados!" + ex.Message);
+            }
+            finally
+            {
+                ConnectionFactory.Connect().Close();
+            }
+
         }
-
     }
 
     
