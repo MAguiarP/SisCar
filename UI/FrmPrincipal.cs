@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Models;
+using BLL;
+
 
 namespace UI
 {
@@ -36,7 +39,14 @@ namespace UI
 
         private void FrmPrincipal_Shown(object sender, EventArgs e)
         {
+            PerfilBLL perfilbll = new PerfilBLL();
+            Perfil perfil = new Perfil();
             toolStripStatusLabel1.Text = "Bem-Vindo(a) " + usuario + "!";
+
+            if (perfilbll.VerificarCoreFundo(perfil).Equals("C"))
+                this.BackColor = ColorTranslator.FromHtml(perfilbll.RetornarCoreFundo(perfil));
+            else if (perfilbll.VerificarCoreFundo(perfil).Equals("I"))
+                this.BackgroundImage = Image.FromFile(perfilbll.RetornarCoreFundo(perfil));
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -74,9 +84,14 @@ namespace UI
 
             if((dlg1 == DialogResult.Yes) || (dlg1 == DialogResult.None))
             {
-            colorDialog1.ShowDialog();
-            this.BackColor = colorDialog1.Color;
-            this.BackgroundImage = null;
+                Perfil perfil = new Perfil();
+                PerfilBLL perfilbll = new PerfilBLL();
+
+                colorDialog1.ShowDialog();
+                this.BackColor = colorDialog1.Color;
+                perfil.Cor = ColorTranslator.ToHtml(this.BackColor);
+                perfilbll.SalvarCor(perfil);
+                this.BackgroundImage = null;
             };
         }
 
@@ -90,6 +105,11 @@ namespace UI
 
             if (openFileDialog1.FileName != "")
                 this.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+            Perfil perfil = new Perfil();
+            PerfilBLL perfilbll = new PerfilBLL();
+
+            perfil.Imagem = openFileDialog1.FileName;
+            perfilbll.SalvarImagem(perfil); 
 
         }
 

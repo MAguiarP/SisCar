@@ -9,6 +9,7 @@ using Npgsql;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq.Expressions;
 
+
 namespace DAL
 {
     public class PerfilDAL
