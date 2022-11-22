@@ -39,7 +39,7 @@
             this.RbFEMININO = new System.Windows.Forms.RadioButton();
             this.RbMASCULINO = new System.Windows.Forms.RadioButton();
             this.CbESTADO = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.TxtFONE2 = new System.Windows.Forms.MaskedTextBox();
             this.TxtFONE1 = new System.Windows.Forms.MaskedTextBox();
             this.TxtCIDADE = new System.Windows.Forms.TextBox();
             this.TxtCEP = new System.Windows.Forms.MaskedTextBox();
@@ -86,7 +86,7 @@
             this.tabPage1.Controls.Add(this.CkRESTRICAO);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.CbESTADO);
-            this.tabPage1.Controls.Add(this.maskedTextBox1);
+            this.tabPage1.Controls.Add(this.TxtFONE2);
             this.tabPage1.Controls.Add(this.TxtFONE1);
             this.tabPage1.Controls.Add(this.TxtCIDADE);
             this.tabPage1.Controls.Add(this.TxtCEP);
@@ -246,13 +246,13 @@
             this.CbESTADO.Size = new System.Drawing.Size(94, 21);
             this.CbESTADO.TabIndex = 10;
             // 
-            // maskedTextBox1
+            // TxtFONE2
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(164, 204);
-            this.maskedTextBox1.Mask = "(999)00000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(87, 20);
-            this.maskedTextBox1.TabIndex = 12;
+            this.TxtFONE2.Location = new System.Drawing.Point(164, 204);
+            this.TxtFONE2.Mask = "(999)00000-0000";
+            this.TxtFONE2.Name = "TxtFONE2";
+            this.TxtFONE2.Size = new System.Drawing.Size(87, 20);
+            this.TxtFONE2.TabIndex = 12;
             // 
             // TxtFONE1
             // 
@@ -266,6 +266,7 @@
             // 
             this.TxtCIDADE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCIDADE.Location = new System.Drawing.Point(338, 204);
+            this.TxtCIDADE.MaxLength = 50;
             this.TxtCIDADE.Name = "TxtCIDADE";
             this.TxtCIDADE.Size = new System.Drawing.Size(167, 20);
             this.TxtCIDADE.TabIndex = 9;
@@ -282,6 +283,7 @@
             // 
             this.TxtBAIRRO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtBAIRRO.Location = new System.Drawing.Point(338, 148);
+            this.TxtBAIRRO.MaxLength = 50;
             this.TxtBAIRRO.Name = "TxtBAIRRO";
             this.TxtBAIRRO.Size = new System.Drawing.Size(167, 20);
             this.TxtBAIRRO.TabIndex = 7;
@@ -290,6 +292,7 @@
             // 
             this.TxtENDERECO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtENDERECO.Location = new System.Drawing.Point(338, 85);
+            this.TxtENDERECO.MaxLength = 80;
             this.TxtENDERECO.Name = "TxtENDERECO";
             this.TxtENDERECO.Size = new System.Drawing.Size(310, 20);
             this.TxtENDERECO.TabIndex = 6;
@@ -315,6 +318,7 @@
             // 
             this.TxtNOME.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNOME.Location = new System.Drawing.Point(8, 85);
+            this.TxtNOME.MaxLength = 50;
             this.TxtNOME.Name = "TxtNOME";
             this.TxtNOME.Size = new System.Drawing.Size(310, 20);
             this.TxtNOME.TabIndex = 3;
@@ -474,6 +478,7 @@
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmClientes_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -511,7 +516,7 @@
         private System.Windows.Forms.MaskedTextBox TxtDATA_NASC;
         private System.Windows.Forms.MaskedTextBox TxtCPF;
         private System.Windows.Forms.TextBox TxtCIDADE;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox TxtFONE2;
         private System.Windows.Forms.MaskedTextBox TxtFONE1;
         private System.Windows.Forms.ComboBox CbESTADO;
         private System.Windows.Forms.CheckBox CkRESTRICAO;
