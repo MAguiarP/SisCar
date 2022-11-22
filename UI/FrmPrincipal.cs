@@ -104,16 +104,19 @@ namespace UI
             openFileDialog1.Multiselect = false;
 
             if (openFileDialog1.FileName != "")
+            {
                 this.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-            Perfil perfil = new Perfil();
-            PerfilBLL perfilbll = new PerfilBLL();
 
-            perfil.Imagem = openFileDialog1.FileName;
-            perfilbll.SalvarImagem(perfil); 
+                Perfil perfil = new Perfil();
+                PerfilBLL perfilbll = new PerfilBLL();
+
+                perfil.Imagem = openFileDialog1.FileName;
+                perfilbll.SalvarImagem(perfil);
+            };
 
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmClientes frmClientes1 = new FrmClientes();
             frmClientes1.ShowDialog();
