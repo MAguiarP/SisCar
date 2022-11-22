@@ -35,7 +35,11 @@ namespace UI
             if (e.KeyCode == Keys.Enter) { }
             ZeraCampos();
 
+<<<<<<< HEAD
             if (e.KeyCode == Keys.Enter) SendKeys.Send("{TAB}");
+=======
+            if(e.KeyCode == Keys.Enter) SendKeys.Send("{TAB}");
+>>>>>>> 0e34e8076507f8c1e915003ee7701a76c20b8f7f
         }
 
         private void ZeraCampos()
@@ -54,11 +58,18 @@ namespace UI
             RbMASCULINO.Checked = false;
             RbFEMININO.Checked = false;
             CkRESTRICAO.Checked = false;
+<<<<<<< HEAD
             TxtCOD_CLIENTE.Enabled = false;
+=======
+            TxtCOD_CLIENTE.Enabled= false;  
+>>>>>>> 0e34e8076507f8c1e915003ee7701a76c20b8f7f
             TxtNOME.Focus();
 
 
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e34e8076507f8c1e915003ee7701a76c20b8f7f
     }
 }
