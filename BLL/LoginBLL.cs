@@ -25,7 +25,7 @@ namespace BLL
             usuario.Login = usuario.Login.ToUpper();
 
             LoginDAL usuarioDal = new LoginDAL();
-            return usuarioDal.verificarLogin(usuario);
+            return usuarioDal.VerificarLogin(usuario);
         }
     }
 }

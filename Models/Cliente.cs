@@ -60,13 +60,8 @@ namespace Models
 
         public String CEP
         {
-<<<<<<< HEAD
             get { return cep; }
             set { cep = value; }
-=======
-            get { return cidade; }
-            set { cidade = value; }
->>>>>>> 0e34e8076507f8c1e915003ee7701a76c20b8f7f
         }
 
         public String Cidade
