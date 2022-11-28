@@ -62,11 +62,18 @@
             this.TxtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TxtCONSULTA = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -110,7 +117,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(656, 368);
+            this.tabPage1.Size = new System.Drawing.Size(476, 368);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -125,7 +132,7 @@
             this.panel2.Location = new System.Drawing.Point(3, 299);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(6);
-            this.panel2.Size = new System.Drawing.Size(650, 66);
+            this.panel2.Size = new System.Drawing.Size(470, 66);
             this.panel2.TabIndex = 15;
             this.panel2.TabStop = true;
             // 
@@ -433,7 +440,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 52);
+            this.panel1.Size = new System.Drawing.Size(470, 52);
             this.panel1.TabIndex = 1;
             this.panel1.TabStop = true;
             // 
@@ -460,6 +467,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -468,12 +477,55 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.TxtCONSULTA);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(650, 100);
+            this.panel3.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Digite nome para consulta:";
+            // 
+            // TxtCONSULTA
+            // 
+            this.TxtCONSULTA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtCONSULTA.Location = new System.Drawing.Point(8, 26);
+            this.TxtCONSULTA.Name = "TxtCONSULTA";
+            this.TxtCONSULTA.Size = new System.Drawing.Size(500, 20);
+            this.TxtCONSULTA.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 103);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(650, 262);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabStop = false;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 394);
             this.Controls.Add(this.tabControl1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmClientes";
@@ -488,6 +540,10 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,5 +584,9 @@
         private System.Windows.Forms.Button BtGRAVAR;
         private System.Windows.Forms.Button BtEXCLUIR;
         private System.Windows.Forms.Button BtFECHAR;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox TxtCONSULTA;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

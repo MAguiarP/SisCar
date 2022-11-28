@@ -18,6 +18,15 @@ namespace UI
         public FrmClientes()
         {
             InitializeComponent();
+            
+            ClienteBLL clientebll = new ClienteBLL();
+            Cliente cliente = new Cliente();
+
+            clientebll.InserirCodigo(cliente);
+            TxtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+            BtEXCLUIR.Enabled = false;
+            TxtCOD_CLIENTE.Enabled = false;
+
         }
 
         private void BtFECHAR_Click(object sender, EventArgs e)
@@ -27,7 +36,48 @@ namespace UI
 
         private void BtGRAVAR_Click(object sender, EventArgs e)
         {
+            Cliente cliente = new Cliente();
+            ClienteBLL clienteBLL = new ClienteBLL();
 
+            try
+            {
+                cliente.Cod_Cliente = TxtCOD_CLIENTE.Text;
+                cliente.Nome = TxtNOME.Text;
+                cliente.Cpf = TxtCPF.Text;
+                cliente.Data_nasc = TxtDATA_NASC.Text;
+                cliente.Endereco = TxtENDERECO.Text;
+                cliente.Bairro = TxtBAIRRO.Text;
+                cliente.CEP = TxtCEP.Text;
+                cliente.Cidade = TxtCIDADE.Text;
+                cliente.Estado = CbESTADO.Text;
+                cliente.Fone1 = TxtFONE1.Text;
+                cliente.Fone2 = TxtFONE2.Text;
+
+
+                if (RbMASCULINO.Checked)
+                    cliente.Sexo = "M";
+                else
+                    cliente.Sexo = "F";
+                if (CkRESTRICAO.Checked)
+                    cliente.Restricao = "S";
+                else
+                    cliente.Restricao = "N";
+
+                clienteBLL.VerificarCampos(cliente);
+                clienteBLL.InserirCliente(cliente);
+
+                MessageBox.Show("O Usúario " + cliente.Nome + " foi cadastrado! ", "Cadastro Efetuado com Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                ZeraCampos();
+                clienteBLL.InserirCodigo(cliente);
+                TxtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+       
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FrmClientes_KeyDown(object sender, KeyEventArgs e)

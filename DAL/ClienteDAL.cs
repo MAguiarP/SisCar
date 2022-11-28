@@ -58,7 +58,7 @@ namespace DAL
             }
         }
 
-        public void InserirCliente(Cliente cliente)
+        public void InserirCodigo(Cliente cliente)
         {
             //Esse procedimento Irá inserir cliente, Será chamado quando for necessária a inserção dados do cliente
             try
@@ -162,7 +162,7 @@ namespace DAL
                     cliente.Cod_Cliente = "0";
 
                 int Codigo = Convert.ToInt32(cliente.Cod_Cliente);
-                Codigo = Codigo + 1;
+                Codigo++;
                 cliente.Cod_Cliente = Codigo.ToString();
 
             }
