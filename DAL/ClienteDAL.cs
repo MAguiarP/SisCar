@@ -77,7 +77,7 @@ namespace DAL
                     "FONE2," +
                     "SEXO," +
                     "RESTRICAO)" +
-                    "VALUES ('{0}',"+
+                    "VALUES ('{0}'," +
                     "'{1}'," +
                     "'{2}'," +
                     "'{3}'," +
@@ -89,7 +89,7 @@ namespace DAL
                     "'{9}'," +
                     "'{10}'," +
                     "'{11}'," +
-                    "'{12}'," ,
+                    "'{12}',",
                     cliente.Nome,
                     cliente.Cpf,
                     cliente.Data_nasc,
@@ -133,7 +133,7 @@ namespace DAL
                 NpgsqlCommand comandoDelete = new NpgsqlCommand(excluiC, ConnectionFactory.Connect());
                 comandoDelete.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Falha ao Excluir Cliente!" + ex.Message);
             }
@@ -150,11 +150,11 @@ namespace DAL
                 string InsereCo = (String.Format(
                     "SELECT MAX(COD_CLIENTES)" +
                     "FROM CLIENTES"));
-                  
 
-               NpgsqlDataAdapter da = new NpgsqlDataAdapter (new NpgsqlCommand(InsereCo,ConnectionFactory.Connect()));
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(new NpgsqlCommand(InsereCo, ConnectionFactory.Connect()));
                 DataTable dt = new DataTable();
-               da.Fill (dt);
+                da.Fill(dt);
 
                 cliente.Cod_Cliente = dt.Rows[0]["max"].ToString();
 
@@ -174,6 +174,29 @@ namespace DAL
             {
                 ConnectionFactory.Connect().Close();
             }
+        }
+
+        public DataTable ConsultarCliente(String NomeCliente)
+        {
+            string ConsultaC = (String.Format(
+                "SELECT * " +
+                "FROM CLIENTES " +
+                "WHERE NOME LIKE '%{0}%' ",
+                NomeCliente));
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter
+                (new NpgsqlCommand(ConsultaC, ConnectionFactory.Connect()));
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
+        public void InserirCliente(Cliente cliente)
+        {
+            ClienteDAL clientedal = new ClienteDAL();
+            clientedal.InserirCliente(cliente);
         }
     }
 }

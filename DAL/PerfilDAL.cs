@@ -70,7 +70,7 @@ namespace DAL
                 string verifica = (string.Format(
                    "SELECT PLANO_DE_FUNDO" +
                    "FROM USUARIOS_CONFIG" +
-                   "WHERE LOGIN ='{0}' ", perfil.Login));
+                   "WHERE LOGIN = '{0}' ", perfil.Login));
 
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter
                     (new NpgsqlCommand(verifica, ConnectionFactory.Connect()));

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 using DAL;
+using System.Reflection.Emit;
 
 namespace BLL
 {
@@ -17,7 +18,14 @@ namespace BLL
 
             perfildall.SalvarCor(perfil);
         }
+        public void SalvarImagem(Perfil perfil)
+        {
+            perfil.Login = Login.User;
+            PerfilDAL perfildall= new PerfilDAL();
 
+            perfildall.SalvarImagem(perfil);
+        }
+        
     public String VerificarCoreFundo(Perfil perfil) 
         {
             PerfilDAL perfilDal = new PerfilDAL();
