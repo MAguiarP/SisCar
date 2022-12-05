@@ -39,7 +39,7 @@
             this.RbFEMININO = new System.Windows.Forms.RadioButton();
             this.RbMASCULINO = new System.Windows.Forms.RadioButton();
             this.CbESTADO = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.TxtFONE2 = new System.Windows.Forms.MaskedTextBox();
             this.TxtFONE1 = new System.Windows.Forms.MaskedTextBox();
             this.TxtCIDADE = new System.Windows.Forms.TextBox();
             this.TxtCEP = new System.Windows.Forms.MaskedTextBox();
@@ -62,11 +62,18 @@
             this.TxtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.TxtCONSULTA = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -86,7 +93,7 @@
             this.tabPage1.Controls.Add(this.CkRESTRICAO);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.CbESTADO);
-            this.tabPage1.Controls.Add(this.maskedTextBox1);
+            this.tabPage1.Controls.Add(this.TxtFONE2);
             this.tabPage1.Controls.Add(this.TxtFONE1);
             this.tabPage1.Controls.Add(this.TxtCIDADE);
             this.tabPage1.Controls.Add(this.TxtCEP);
@@ -151,6 +158,7 @@
             this.BtEXCLUIR.Text = "&EXCLUIR";
             this.BtEXCLUIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtEXCLUIR.UseVisualStyleBackColor = true;
+            this.BtEXCLUIR.Click += new System.EventHandler(this.BtEXCLUIR_Click);
             // 
             // BtGRAVAR
             // 
@@ -162,6 +170,7 @@
             this.BtGRAVAR.Text = "&GRAVAR";
             this.BtGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtGRAVAR.UseVisualStyleBackColor = true;
+            this.BtGRAVAR.Click += new System.EventHandler(this.BtGRAVAR_Click);
             // 
             // CkRESTRICAO
             // 
@@ -245,13 +254,13 @@
             this.CbESTADO.Size = new System.Drawing.Size(94, 21);
             this.CbESTADO.TabIndex = 10;
             // 
-            // maskedTextBox1
+            // TxtFONE2
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(164, 204);
-            this.maskedTextBox1.Mask = "(999)00000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(87, 20);
-            this.maskedTextBox1.TabIndex = 12;
+            this.TxtFONE2.Location = new System.Drawing.Point(164, 204);
+            this.TxtFONE2.Mask = "(999)00000-0000";
+            this.TxtFONE2.Name = "TxtFONE2";
+            this.TxtFONE2.Size = new System.Drawing.Size(87, 20);
+            this.TxtFONE2.TabIndex = 12;
             // 
             // TxtFONE1
             // 
@@ -265,6 +274,7 @@
             // 
             this.TxtCIDADE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCIDADE.Location = new System.Drawing.Point(338, 204);
+            this.TxtCIDADE.MaxLength = 50;
             this.TxtCIDADE.Name = "TxtCIDADE";
             this.TxtCIDADE.Size = new System.Drawing.Size(167, 20);
             this.TxtCIDADE.TabIndex = 9;
@@ -281,6 +291,7 @@
             // 
             this.TxtBAIRRO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtBAIRRO.Location = new System.Drawing.Point(338, 148);
+            this.TxtBAIRRO.MaxLength = 50;
             this.TxtBAIRRO.Name = "TxtBAIRRO";
             this.TxtBAIRRO.Size = new System.Drawing.Size(167, 20);
             this.TxtBAIRRO.TabIndex = 7;
@@ -289,6 +300,7 @@
             // 
             this.TxtENDERECO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtENDERECO.Location = new System.Drawing.Point(338, 85);
+            this.TxtENDERECO.MaxLength = 80;
             this.TxtENDERECO.Name = "TxtENDERECO";
             this.TxtENDERECO.Size = new System.Drawing.Size(310, 20);
             this.TxtENDERECO.TabIndex = 6;
@@ -309,11 +321,13 @@
             this.TxtCPF.Name = "TxtCPF";
             this.TxtCPF.Size = new System.Drawing.Size(87, 20);
             this.TxtCPF.TabIndex = 4;
+            this.TxtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // TxtNOME
             // 
             this.TxtNOME.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNOME.Location = new System.Drawing.Point(8, 85);
+            this.TxtNOME.MaxLength = 50;
             this.TxtNOME.Name = "TxtNOME";
             this.TxtNOME.Size = new System.Drawing.Size(310, 20);
             this.TxtNOME.TabIndex = 3;
@@ -454,6 +468,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -461,6 +477,51 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Enter += new System.EventHandler(this.TabPage2_Enter);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 39);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(650, 326);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabStop = false;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.TxtCONSULTA);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(650, 36);
+            this.panel3.TabIndex = 0;
+            // 
+            // TxtCONSULTA
+            // 
+            this.TxtCONSULTA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtCONSULTA.Location = new System.Drawing.Point(135, 9);
+            this.TxtCONSULTA.Name = "TxtCONSULTA";
+            this.TxtCONSULTA.Size = new System.Drawing.Size(500, 20);
+            this.TxtCONSULTA.TabIndex = 1;
+            this.TxtCONSULTA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCONSULTA_KeyDown);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(0, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Digite nome para consulta:";
             // 
             // FrmClientes
             // 
@@ -468,11 +529,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 394);
             this.Controls.Add(this.tabControl1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmClientes_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -481,6 +544,10 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -510,7 +577,7 @@
         private System.Windows.Forms.MaskedTextBox TxtDATA_NASC;
         private System.Windows.Forms.MaskedTextBox TxtCPF;
         private System.Windows.Forms.TextBox TxtCIDADE;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox TxtFONE2;
         private System.Windows.Forms.MaskedTextBox TxtFONE1;
         private System.Windows.Forms.ComboBox CbESTADO;
         private System.Windows.Forms.CheckBox CkRESTRICAO;
@@ -521,5 +588,9 @@
         private System.Windows.Forms.Button BtGRAVAR;
         private System.Windows.Forms.Button BtEXCLUIR;
         private System.Windows.Forms.Button BtFECHAR;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox TxtCONSULTA;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

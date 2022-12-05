@@ -109,9 +109,9 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.clientesToolStripMenuItem.Text = "&Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.ClientesToolStripMenuItem_Click);
             // 
             // veículosToolStripMenuItem
             // 
@@ -119,7 +119,7 @@
             this.marcasToolStripMenuItem,
             this.modelosToolStripMenuItem});
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.veículosToolStripMenuItem.Text = "&Veículos";
             // 
             // marcasToolStripMenuItem
@@ -137,7 +137,7 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.usuáriosToolStripMenuItem.Text = "&Usuários";
             // 
             // movimentaçãoToolStripMenuItem
@@ -197,33 +197,33 @@
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.CalculadoraToolStripMenuItem_Click);
             // 
             // consultaDetranToolStripMenuItem
             // 
             this.consultaDetranToolStripMenuItem.Name = "consultaDetranToolStripMenuItem";
-            this.consultaDetranToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.consultaDetranToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaDetranToolStripMenuItem.Text = "Consulta &Detran";
             this.consultaDetranToolStripMenuItem.Click += new System.EventHandler(this.ConsultaDetranToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(156, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // corDeFundoToolStripMenuItem
             // 
             this.corDeFundoToolStripMenuItem.Name = "corDeFundoToolStripMenuItem";
-            this.corDeFundoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.corDeFundoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.corDeFundoToolStripMenuItem.Text = "C&or de Fundo";
             this.corDeFundoToolStripMenuItem.Click += new System.EventHandler(this.CorDeFundoToolStripMenuItem_Click);
             // 
             // papelDeParedeToolStripMenuItem
             // 
             this.papelDeParedeToolStripMenuItem.Name = "papelDeParedeToolStripMenuItem";
-            this.papelDeParedeToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.papelDeParedeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.papelDeParedeToolStripMenuItem.Text = "&Papel de Parede";
             this.papelDeParedeToolStripMenuItem.Click += new System.EventHandler(this.PapelDeParedeToolStripMenuItem_Click);
             // 

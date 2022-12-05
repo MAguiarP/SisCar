@@ -29,8 +29,8 @@ namespace Models
 
         public string Valor
         {
-            get { return Valor; }
-            set { Valor = value; }
+            get { return valor; }
+            set { valor = value; }
         }
 
         public string Descricao
@@ -39,13 +39,13 @@ namespace Models
             set { descricao = value; }
         }
 
-        private string Plano_de_Fundo
+        public string Plano_de_Fundo
         {
             get { return plano_de_fundo; }
             set { plano_de_fundo = value; }
         }
 
-        private string Login
+        public string Login
         {
             get { return login; }
             set { login = value; }

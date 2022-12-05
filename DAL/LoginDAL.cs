@@ -11,7 +11,7 @@ namespace DAL
 {
     public class LoginDAL
     {
-        public bool verificarLogin(Usuario usuario)
+        public bool VerificarLogin(Usuario usuario)
         {
             String validaUsuario = (String.Format(
                 "SELECT NOME " +
