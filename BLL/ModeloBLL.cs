@@ -11,7 +11,7 @@ namespace BLL
 {
     public class ModeloBLL
     {
-        public bool verificarCampos(Modelo modelo)
+        public bool VerificarCampos(Modelo modelo)
         {
             if (modelo.Ds_Modelo.Trim().Length == 0)
             {
@@ -26,31 +26,31 @@ namespace BLL
             return true;
         }
 
-        public void inserirCodigo(Modelo modelo)
+        public void InserirCodigo(Modelo modelo)
         {
             ModeloDAL modelodal = new ModeloDAL();
             modelodal.InserirCodigo(modelo);
         }
 
-        public void inserirModelo(Modelo modelo)
+        public void InserirModelo(Modelo modelo)
         {
             ModeloDAL modelodal = new ModeloDAL();
             modelodal.InserirModelo(modelo);
         }
 
-        public void excluirModelo(Modelo modelo)
+        public void ExcluirModelo(Modelo modelo)
         {
             ModeloDAL modelodal = new ModeloDAL();
             modelodal.ExcluirModelo(modelo);
         }
 
-        public DataTable consultarModelo(String NomeModelo)
+        public DataTable ConsultarModelo(String NomeModelo)
         {
             ModeloDAL modelodal = new ModeloDAL();
             return modelodal.ConsultarModelo(NomeModelo);
         }
 
-        public DataTable retornaModelo(String NomeMarca)
+        public DataTable RetornaModelo(String NomeMarca)
         {
             ModeloDAL modelodal = new ModeloDAL();
             return modelodal.RetornaModelo(NomeMarca);

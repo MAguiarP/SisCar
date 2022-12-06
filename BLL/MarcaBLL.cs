@@ -11,7 +11,7 @@ namespace BLL
 {
     public class MarcaBLL
     {
-        public bool verificarCampos(Marca marca)
+        public bool VerificarCampos(Marca marca)
         {
             if (marca.Ds_Marca.Trim().Length == 0)
             {
@@ -21,31 +21,31 @@ namespace BLL
             return true;
         }
 
-        public void inserirCodigo(Marca marca)
+        public void InserirCodigo(Marca marca)
         {
             MarcaDAL marcadal = new MarcaDAL();
             marcadal.InserirCodigo(marca);
         }
 
-        public void inserirMarca(Marca marca)
+        public void InserirMarca(Marca marca)
         {
             MarcaDAL marcadal = new MarcaDAL();
             marcadal.InserirMarca(marca);
         }
 
-        public void excluirMarca(Marca marca)
+        public void ExcluirMarca(Marca marca)
         {
             MarcaDAL marcadal = new MarcaDAL();
             marcadal.ExcluirMarca(marca);
         }
 
-        public DataTable consultarMarca(String NomeCliente)
+        public DataTable ConsultarMarca(String NomeCliente)
         {
             MarcaDAL marcadal = new MarcaDAL();
             return marcadal.ConsultarMarca(NomeCliente);
         }
 
-        public DataTable retornaMarca()
+        public DataTable RetornaMarca()
         {
             MarcaDAL marcadal = new MarcaDAL();
             return marcadal.RetornaMarca();

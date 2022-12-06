@@ -83,7 +83,7 @@ namespace DAL
                     marca.Cod_Marca = "0";
 
                 int Codigo = Convert.ToInt32(marca.Cod_Marca);
-                Codigo = Codigo + 1;
+                Codigo++;
                 marca.Cod_Marca = Codigo.ToString();
             }
             catch (Exception ex)
@@ -128,5 +128,9 @@ namespace DAL
 
             return dt;
         }
+
+
     }
+
+
 }

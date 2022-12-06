@@ -52,6 +52,7 @@
     <Compile Include="LoginDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="ModeloDAL.cs" />
+    <Compile Include="MovimentacaoDAL.cs" />
     <Compile Include="PerfilDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -121,6 +121,48 @@ namespace UI
             FrmClientes frmClientes1 = new FrmClientes();
             frmClientes1.ShowDialog();
         }
+
+        private void MarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarcas frmMarcas1 = new frmMarcas();
+            frmMarcas1.ShowDialog();
+        }
+
+        private void ModelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModelos frmModelos1 = new FrmModelos();
+            frmModelos1.ShowDialog();
+        }
+
+        private void UsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frmUsuarios1 = new FrmUsuarios();
+            frmUsuarios1.ShowDialog();
+        }
+
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmMovimentacao frmMovimentacao1 = new frmMovimentacao();
+            frmMovimentacao1.Entrada_Saida = "E";
+            frmMovimentacao1.ShowDialog();
+
+
+        }
+
+        private void ToolStripButton2_Click(object sender, EventArgs e)
+        {
+            frmMovimentacao frmMovimentacao1 = new frmMovimentacao();
+            frmMovimentacao1.Entrada_Saida = "E";
+            frmMovimentacao1.ShowDialog();
+
+
+        }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstoque frmEstoque1 = new frmEstoque();
+            frmEstoque1.ShowDialog();
+        }
     }
 
 }

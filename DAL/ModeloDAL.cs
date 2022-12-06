@@ -85,7 +85,7 @@ namespace DAL
                     modelo.Cod_Modelo = "0";
 
                 int Codigo = Convert.ToInt32(modelo.Cod_Modelo);
-                Codigo = Codigo + 1;
+                Codigo++;
                 modelo.Cod_Modelo = Codigo.ToString();
             }
             catch (Exception ex)
@@ -136,5 +136,8 @@ namespace DAL
 
             return dt;
         }
+
+       
     }
+
 }
