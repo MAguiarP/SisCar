@@ -185,6 +185,7 @@
             this.gráficasToolStripMenuItem.Name = "gráficasToolStripMenuItem";
             this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gráficasToolStripMenuItem.Text = "&Gráficas";
+            this.gráficasToolStripMenuItem.Click += new System.EventHandler(this.ToolStripButton4_Click);
             // 
             // utilitáriosToolStripMenuItem
             // 
@@ -362,6 +363,7 @@
             this.toolStripButton4.Size = new System.Drawing.Size(54, 67);
             this.toolStripButton4.Text = "Gráficos";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.ToolStripButton4_Click);
             // 
             // toolStripSeparator4
             // 

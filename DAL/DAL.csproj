@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="ConnectionFactory.cs" />
+    <Compile Include="GraficoDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="ModeloDAL.cs" />

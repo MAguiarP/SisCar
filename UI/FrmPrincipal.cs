@@ -163,6 +163,12 @@ namespace UI
             frmEstoque frmEstoque1 = new frmEstoque();
             frmEstoque1.ShowDialog();
         }
+
+        private void ToolStripButton4_Click(object sender, EventArgs e)
+        {
+            FrmGraficos FrmGraficos1 = new FrmGraficos();
+            FrmGraficos1.ShowDialog();
+        }
     }
 
 }
